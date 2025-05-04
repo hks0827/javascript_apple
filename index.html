@@ -1,1 +1,29 @@
-start
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel = "stylesheet" href="main.css">
+  </head> 
+  <body>
+    
+    <button onclick="alert_message('idOpen', 'block')">아이디 열기 버튼</button>
+    <button onclick="alert_message('passwordOpen' ,'block')">비밀번호 열기 버튼</button>
+    
+    <div class="alert-box" id="idOpen">
+      <p>아이디를 입력 안하셨어요</p> 
+      <button onclick="alert_message('idOpen','none')">닫기</button>
+    </div>
+    <div class="alert-box" id="passwordOpen">
+      <p>비밀번호를 입력 안하셨어요</p> 
+      <button onclick="alert_message('passwordOpen','none')">닫기</button>
+    </div>
+      
+  </body>
+
+  <script>
+    function alert_message(idOrPass, command){
+      document.getElementById(idOrPass).style.display = command;
+    }
+  </script>
+</html>
