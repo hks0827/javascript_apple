@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel = "stylesheet" href="main.css">
   </head> 
   <body>
-    
-    <button onclick="alert_message('idOpen', 'block')">아이디 열기 버튼</button>
-    <button onclick="alert_message('passwordOpen' ,'block')">비밀번호 열기 버튼</button>
-    
-    <div class="alert-box" id="idOpen">
-      <p>아이디를 입력 안하셨어요</p> 
-      <button onclick="alert_message('idOpen','none')">닫기</button>
-    </div>
-    <div class="alert-box" id="passwordOpen">
-      <p>비밀번호를 입력 안하셨어요</p> 
-      <button onclick="alert_message('passwordOpen','none')">닫기</button>
-    </div>
+    <h4 id="test" class="test1">안녕하세요</h4>
+    <script>
       
+      document.getElementById('test').innerHTML = '안녕 javascript';
+      document.querySelector('#test') // 쌩 자바스크립트 에서 query 쓰는 법 
+      document.querySelectorAll('#test')[0] // 여러개 받고 싶을 때
+      $('#test').html('안녕 jquery') // = getElementById 
+      $('.test1').text('안녕 text') // = getElementsByClassName
+      $('#test').css('color','red') // css 고치기 
+      $('#test').attr('src','aaaa.jpg') // src, href 등등 달아주기 
+    
+    </script>
   </body>
-
-  <script>
-    function alert_message(idOrPass, command){
-      document.getElementById(idOrPass).style.display = command;
-    }
-  </script>
 </html>
